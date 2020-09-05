@@ -1,0 +1,24 @@
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+    </head>
+    <body>
+		<p>Any text</p>
+			
+			<!-- Кнопка(ссылка с картинкой) -->
+			<!-- img/wb.png - путь к картинке для ссылки -->
+		<a href="javascript: goToWhatsApp();">
+			<img style='width:"375' src="img/wb.png" alt="Ask to WhatsApp">
+		</a>
+		
+		<!-- Тут скрипт создаёт функцию goToWhatsApp, которая читает адресс страницы и вставляет его в адресс для оправки сообщения в WhatsApp. -->
+		<!-- Телефон вставил spm-lab. -->
+		<script type="text/javascript">
+			function goToWhatsApp(){
+			  var url = window.location.href;
+			  document.location.href = 'https://api.whatsapp.com/send?phone=+79680595062&text=' + url;
+			}
+		</script>
+	</body>
+</html>
